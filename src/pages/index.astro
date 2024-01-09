@@ -1,16 +1,42 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <main class="font-Unbounded flex flex-col h-screen">
+    <Navbar />
+    <div
+      class="flex items-center flex-col border-b-2 border-black mx-5 flex-grow justify-center"
+    >
+      <img
+        src="/assets/images/Logo.png"
+        alt="Logo"
+        class="md:w-[300px] w-[200px]"
+      />
+      <p class="font-black md:text-[180px] text-5xl leading-none">GIZEM DEV</p>
+      <p class="md:mx-10 md:text-2xl text-lg text-center my-5">
+        HI FELLOW HUMANS. I'M VISHAL MURUGAN, FULL STACK WEB 3 DEVELOPER BASED
+        IN EARTH. <span class="text-[#333]"
+          >I AM ALSO A DESIGNER, WRITER, AND CREATOR OF THINGS.</span
+        >
+      </p>
+    </div>
+    <div
+      class="grid grid-cols-2 gap-4 md:grid-cols-3 my-5 text-center text-xs md:text-base mx-5"
+    >
+      <div class="col-span-1">
+        Currently have 3 Years of Experience in Full Stack Web Development.
+      </div>
+      <div class="col-span-1">
+        I like to describe myself as a designer with high discipline and enjoy
+        working in a team or independently.
+      </div>
+      <div class="col-span-1">Say Hi! vismbs@pm.me</div>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;500;600;700;800;900&display=swap");
+</style>
